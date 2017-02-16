@@ -1,0 +1,40 @@
+﻿@model List<Logic.clientes>
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_LayoutLogueados.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Mantenimiento de Pasajeros</h2>
+    <br /><br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>DPI</th>
+                <th>NIT</th>
+                <th>TELEFONO</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombre</td>
+                <td>@item.apellido</td>
+                <td>@item.dpi</td>
+                <td>@item.nit</td>
+                <td>@item.telefono</td>
+                <td class="text-right">
+                    <a href="@Url.Action()" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="@Url.Action()" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
+                    <a href="@Url.Action()" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<!--MODAL PARA EDITAR-->
+
+
