@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/Assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/Assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <script src="~/Assets/js/jquery-1.12.0.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <!--animate-->
+    <link href="~/Assets/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Assets/js/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+
+</head>
+<body>
+    <!-- top-header -->
+    <div class="top-header">
+        <div class="container">
+            <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
+                <li class="hm"><a href=@Url.Action("Index","Home")><i class="fa fa-home"></i> Home</a></li>
+                <!--<li class="prnt"><a href="javascript:window.print()">Imprimir Ticket</a></li>-->
+
+            </ul>
+            <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
+                <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">Cerrar Sesión <span class="glyphicon glyphicon-remove-sign"></span></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /top-header ---->
+    <!--- header ---->
+    <div class="header">
+        <div class="container">
+            <div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+                <a href="#">Transportes <span>Ya Me Voy!</span></a>
+            </div>
+
+            <div class="lock fadeInDown animated" data-wow-delay=".5s">
+                <li><i class="fa fa-lock"></i></li>
+                <li><div class="securetxt">SEGURIDAD<br>   EN SUS VIAJES</div></li>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /header ---->
+    <!--- footer-btm ---->
+    <div class="footer-btm wow fadeInLeft animated" data-wow-delay=".5s">
+        <div class="container">
+            <div class="navigation">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav class="cl-effect-1">
+                            <ul class="nav navbar-nav">
+
+                                <li><a href="@Url.Action("ProgramacionViajes","Home")"><span class="glyphicon glyphicon-globe"></span> Programación de Viajes</a></li>
+                                <li><a href="@Url.Action("TerminosCondiciones","Home")"><span class="glyphicon glyphicon-book"></span> Términos y Condiciones</a></li>
+                                <li><a href="@Url.Action("AntesDeViajar","Home")"><span class="glyphicon glyphicon-dashboard"></span> Antes de Viajar</a></li>
+                            </ul>
+                        </nav>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /footer-btm ---->
+    @RenderBody()
+    <!---copy-right ---->
+    <div class="copy-right">
+        <div class="container">
+
+            <div class="footer-social-icons wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+                <ul>
+                    <li><a class="facebook" href="#"><span>Facebook</span></a></li>
+                    <li><a class="twitter" href="#"><span>Twitter</span></a></li>
+                    <li><a class="googleplus" href="#"><span>Google+</span></a></li>
+                </ul>
+            </div>
+            <p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">@DateTime.Now.Year <strong> Eduardo Barrios Developer</strong> </p>
+        </div>
+    </div>
+    <!--- /copy-right ---->
+</body>
+</html>

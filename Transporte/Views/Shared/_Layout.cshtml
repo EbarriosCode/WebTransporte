@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/Assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/Assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <script src="~/Assets/js/jquery-1.12.0.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <!--animate-->
+    <link href="~/Assets/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/Assets/js/wow.min.js"></script>
+    <script>
+		 new WOW().init();
+    </script>
+
+</head>
+<body>
+    <!-- top-header -->
+    <div class="top-header">
+        <div class="container">
+            <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
+                <li class="hm"><a href=@Url.Action("Index","Home")><i class="fa fa-home"></i> Home</a></li>
+                <!--<li class="prnt"><a href="javascript:window.print()">Imprimir Ticket</a></li>-->
+                
+            </ul>
+            <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">                
+                <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">Login <span class="glyphicon glyphicon-user"></span></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /top-header ---->
+    <!--- header ---->
+    <div class="header">
+        <div class="container">
+            <div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+                <a href="#">Transportes <span>Ya Me Voy!</span></a>
+            </div>
+
+            <div class="lock fadeInDown animated" data-wow-delay=".5s">
+                <li><i class="fa fa-lock"></i></li>
+                <li><div class="securetxt">SEGURIDAD<br>   EN SUS VIAJES</div></li>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /header ---->
+    <!--- footer-btm ---->
+    <div class="footer-btm wow fadeInLeft animated" data-wow-delay=".5s">
+        <div class="container">
+            <div class="navigation">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav class="cl-effect-1">
+                            <ul class="nav navbar-nav">
+
+                                <li><a href="@Url.Action("ProgramacionViajes","Home")"><span class="glyphicon glyphicon-globe"></span> Programación de Viajes</a></li>
+                                <li><a href="@Url.Action("TerminosCondiciones","Home")"><span class="glyphicon glyphicon-book"></span> Términos y Condiciones</a></li>
+                                <li><a href="@Url.Action("AntesDeViajar","Home")"><span class="glyphicon glyphicon-dashboard"></span> Antes de Viajar</a></li>
+                                <li><a href="@Url.Action("Contacto","Home")"><span class="glyphicon glyphicon-envelope"></span> Contacto</a></li>
+                                <li><a href="@Url.Action("AcercaDe","Home")"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </nav>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /footer-btm ---->
+    @RenderBody()
+
+    <!--- footer-top ---->
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-left wow fadeInRight animated" data-wow-delay=".5s">
+                <h3>Rutas</h3>
+                <ul>
+                    <li><a href="https://es.wikipedia.org/wiki/Guatemala" target="_blank">Guatemala</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Pet%C3%A9n" target="_blank">Petén</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Chiquimula_(municipio)" target="_blank">Chiquimula-Esquipulas</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Cob%C3%A1n" target="_blank">Alta Verapaz-Cobán</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Quetzaltenango" target="_blank">Quetzaltenango</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/San_Marcos_(Guatemala)" target="_blank">San Marcos</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Escuintla_(departamento)" target="_blank">Escuintla</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Quich%C3%A9_(Guatemala)" target="_blank">El Quiché</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Lago_de_Atitl%C3%A1n" target="_blank">Atitlán</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Amatitl%C3%A1n_(Guatemala)" target="_blank">Amatitlán</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/M%C3%A9xico" target="_blank">México</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Tapachula" target="_blank">Tapachula</a></li>
+                
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--- /footer-top ---->
+    <!---copy-right ---->
+    <div class="copy-right">
+        <div class="container">
+
+            <div class="footer-social-icons wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+                <ul>
+                    <li><a class="facebook" href="#"><span>Facebook</span></a></li>
+                    <li><a class="twitter" href="#"><span>Twitter</span></a></li>
+                    <li><a class="googleplus" href="#"><span>Google+</span></a></li>
+                </ul>
+            </div>
+            <p class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">© 2016 Green Wheels . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> <strong> Eduardo Barrios Developer</strong> </p>
+        </div>
+    </div>
+    <!--- /copy-right ---->
+    <!-- signin -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-info">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-spa">
+                    <div class="login-grids">
+                        <div class="login">
+                            <div class="login-left">
+                                <ul>
+                                    <li><a class="fb" href="#"><i></i>Ingresar con Facebook</a></li>
+                                    <li><a class="goog" href="#"><i></i>Ingresar con Google</a></li>
+                                </ul>
+                            </div>
+                            <div class="login-right">
+                                <form>
+                                    <h3>Ingresar con su cuenta</h3>
+                                    <input type="text" value="Ingrese su Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ingrese su Email';}" required="">
+                                    <input type="password" value="Contraseña" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contraseña';}" required="">
+                                    <input type="submit" value="ENTRAR">
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //signin -->
+</body>
+</html>
