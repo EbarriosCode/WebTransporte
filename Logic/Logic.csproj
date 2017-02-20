@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F6440098-5BFD-4FED-8A0E-7D17CCA46E18}</ProjectGuid>
+    <ProjectGuid>{BBFE96F3-AF5C-4B7A-9058-427C1BA829A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Logic</RootNamespace>
@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clientes.cs" />
+    <Compile Include="departamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransContext.cs" />
   </ItemGroup>

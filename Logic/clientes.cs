@@ -4,6 +4,7 @@ namespace Logic
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
     using System.Linq;
 
@@ -26,22 +27,67 @@ namespace Logic
         [StringLength(15)]
         public string telefono { get; set; }
 
+        [StringLength(255)]
+        public string direccion { get; set; }
+
+        public int? departamento { get; set; }
+
+        public virtual departamento departamento1 { get; set; }
+
         public List<clientes> ListarClientes()
         {
-            var clientes = new List<clientes>();
+            var Clientes = new List<clientes>();
             try
             {
-                using(var context = new TransContext())
+                using (var context = new TransContext())
                 {
-                    clientes = context.clientes.ToList();
+                    Clientes = context.clientes.ToList();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw new Exception(e.Message);
             }
-            return clientes;
+            return Clientes;
+        }
+
+        public clientes getCliente(int id)
+        {
+            var Cliente = new clientes();
+            try
+            {
+                using (var context = new TransContext())
+                {
+                    Cliente = context.clientes.Include("departamento1").Where(x => x.id == id).Single();
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+            return Cliente;
+        }
+
+        public void Guardar()
+        {
+            try
+            {
+                using (var context = new TransContext())
+                {
+                    //if(this.id == 0)
+                    //{
+                        context.Entry(this).State = EntityState.Added;
+                    //}
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

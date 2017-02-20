@@ -84,6 +84,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -125,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\js\modales.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -153,6 +156,9 @@
     <Content Include="Views\Home\AcercaDe.cshtml" />
     <Content Include="Views\Shared\_LayoutLogueados.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Clientes\Detalle.cshtml" />
+    <Content Include="Views\Clientes\Guardar.cshtml" />
+    <Content Include="Views\Clientes\Crear.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,12 +171,11 @@
     <Folder Include="Assets\css\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="Assets\images\" />
-    <Folder Include="Assets\js\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logic\Logic.csproj">
-      <Project>{f6440098-5bfd-4fed-8a0e-7d17cca46e18}</Project>
+      <Project>{bbfe96f3-af5c-4b7a-9058-427c1ba829a6}</Project>
       <Name>Logic</Name>
     </ProjectReference>
   </ItemGroup>

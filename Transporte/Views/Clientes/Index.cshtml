@@ -5,16 +5,20 @@
 }
 
 <div class="container">
-    <h2 class="text-center">Mantenimiento de Pasajeros</h2>
+    <br />
+    <div class="jumbotron">
+        <h2 class="text-center">Mantenimiento de Pasajeros</h2>
+    </div>
+    <a id="btnNuevo" data-toggle="modal" href="#modal-insertar" class="btn btn-info"><i class="glyphicon glyphicon-plus"></i></a>
+    @*<a class="btn btn-info" href="~/Clientes/Crear"><i class="glyphicon glyphicon-plus"></i></a>*@
     <br /><br />
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>NOMBRES</th>
                 <th>APELLIDOS</th>
                 <th>DPI</th>
-                <th>NIT</th>
-                <th>TELEFONO</th>
+                <th>DIRECCION</th>
             </tr>
         </thead>
         @foreach (var item in Model)
@@ -23,10 +27,9 @@
                 <td>@item.nombre</td>
                 <td>@item.apellido</td>
                 <td>@item.dpi</td>
-                <td>@item.nit</td>
-                <td>@item.telefono</td>
+                <td>@item.direccion</td>
                 <td class="text-right">
-                    <a href="@Url.Action()" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="~/Clientes/Detalle/@item.id" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="@Url.Action()" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
                     <a href="@Url.Action()" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                 </td>
@@ -35,6 +38,24 @@
     </table>
 </div>
 
-<!--MODAL PARA EDITAR-->
+<!-- MODAL PARA INSERTAR NUEVO -->
+<div class="modal fade" id="modal-insertar">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="text-center "><strong>Nuevo Cliente</strong> <i class="glyphicon glyphicon-plus"></i></h2>
+            </div>
 
+            <div class="modal-body">
+                <div id="modal-content">
+                    <p>Cargando...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+    <script src="~/Assets/js/modales.js"></script>
+
+    

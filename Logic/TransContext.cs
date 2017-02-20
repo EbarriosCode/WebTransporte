@@ -13,7 +13,7 @@ namespace Logic
         }
 
         public virtual DbSet<clientes> clientes { get; set; }
-
+        public virtual DbSet<departamento> departamento { get; set; }        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<clientes>()
@@ -35,6 +35,20 @@ namespace Logic
             modelBuilder.Entity<clientes>()
                 .Property(e => e.telefono)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<clientes>()
+                .Property(e => e.direccion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<departamento>()
+                .Property(e => e.nombreDepartamento)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<departamento>()
+                .HasMany(e => e.clientes)
+                .WithOptional(e => e.departamento1)
+                .HasForeignKey(e => e.departamento)
+                .WillCascadeOnDelete();
         }
     }
 }
